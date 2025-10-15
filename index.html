@@ -3,53 +3,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asia Hamdi Mubarak Adam - GIS Specialist</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Update the title with your name and profession -->
+    <title>Asia Hamdi Mubarak - GIS Specialist & Data Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* MAIN STYLING RULES - Customize these to change the overall look */
+        body {
+            box-sizing: border-box;
+        }
+        
+        /* MAIN COLOR PALETTE - Change these colors to update your theme */
+        /* Orange gradient used for buttons and highlights */
+        .gradient-bg {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        /* Purple gradient for sections and cards */
+        .pastel-purple {
+            background: linear-gradient(135deg, #e8d5ff 0%, #d4b5ff 100%);
+        }
+        
+        /* Blue gradient for sections and cards */
+        .pastel-blue {
+            background: linear-gradient(135deg, #cce7ff 0%, #a8d8ff 100%);
+        }
+        
+        /* Pink gradient for sections and cards */
+        .pastel-pink {
+            background: linear-gradient(135deg, #ffd6e8 0%, #ffb3d9 100%);
+        }
+        
+        /* Green gradient for sections and cards */
+        .pastel-green {
+            background: linear-gradient(135deg, #d4f4dd 0%, #b8e6c1 100%);
+        }
+        
+        /* HOVER EFFECTS - Controls how cards lift when you hover over them */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px); /* Change -8px to make cards lift more or less */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* SKILL BAR ANIMATION - Controls how skill bars fill up */
+        .skill-progress {
+            transition: width 2s ease-in-out; /* Change 2s to make animation faster or slower */
+        }
+        
+        /* FADE IN ANIMATION - Controls how sections appear when loading */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Change 30px to start from higher or lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out; /* Change 0.8s to make animation faster or slower */
+        }
+        
+        /* NAVIGATION ACTIVE STATE - Style for the currently selected menu item */
+        .nav-active {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #6b46c1; /* Change this color to update active menu text color */
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <h2>Asia Hamdi Mubarak Adam - GIS Specialist and  Geospatial Data Analyst</h2>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio </a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50 text-gray-800 font-sans">
+    <!-- NAVIGATION BAR - Update your name and menu items here -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- Replace "Asia Hamdi Mubarak" with your name -->
+                <div class="text-2xl font-bold text-purple-600">Asia Hamdi Mubarak</div>
+                
+                <!-- DESKTOP MENU - Add or remove menu items here -->
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="showSection('home')" class="nav-btn px-4 py-2 rounded-full transition duration-300 hover:bg-purple-100">Home</button>
+                    <button onclick="showSection('about')" class="nav-btn px-4 py-2 rounded-full transition duration-300 hover:bg-purple-100">About Me</button>
+                    <button onclick="showSection('portfolio')" class="nav-btn px-4 py-2 rounded-full transition duration-300 hover:bg-purple-100">Portfolio</button>
+                    <button onclick="showSection('certifications')" class="nav-btn px-4 py-2 rounded-full transition duration-300 hover:bg-purple-100">Certifications</button>
+                    <button onclick="showSection('contact')" class="nav-btn px-4 py-2 rounded-full transition duration-300 hover:bg-purple-100">Contact</button>
+                    <!-- To add a new menu item, copy the line above and change the text and showSection('newpage') -->
+                </div>
+                
+                <!-- Mobile menu button - Don't change this -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </nav>
 
-    <!-- Home Content -->
-    <section id="intro">
-        <h2>Hi, I'm Asia Hamdi Mubarak Adam</h2>
-        <p>I am a <strong>GIS Specialist</strong> with extensive experience in geospatial data analysis, remote sensing, and GIS applications. My portfolio showcases various projects I've completed,and amaizing maps i done, including environmental analysis, and flood mapping and more.</p>
-        <p>With a Bachelor degree in Geographic Information System and Remote Sensing from Future University, I have honed my technical skills in <strong>QGIS, ArcGIS, Google Earth Engine</strong>, and <strong>Python</strong>.</p>
-        <a href="about.html" class="resume-button">Learn More About Me</a>
-    </section>
-
-    <!-- Quick Links to Sections -->
-<section id="quick-links">
-    <h2>Explore My Work</h2>
-    <div class="link-boxes">
-        <div class="link-box">
-            <a href="portfolio.html" class="link-button">Portfolio and Skills</a>
-        </div>
-        <div class="link-box">
-            <a href="certifications.html" class="link-button">My Certifications</a>
-        </div>
-        <div class="link-box">
-            <a href="contact.html" class="link-button">Get in Touch</a>
+    <!-- MOBILE MENU - Make sure this matches your desktop menu items -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/90 backdrop-blur-md shadow-lg">
+        <div class="px-6 py-4 space-y-2">
+            <!-- Keep these menu items the same as your desktop menu -->
+            <button onclick="showSection('home')" class="block w-full text-left px-4 py-2 rounded-lg hover:bg-purple-100">Home</button>
+            <button onclick="showSection('about')" class="block w-full text-left px-4 py-2 rounded-lg hover:bg-purple-100">About Me</button>
+            <button onclick="showSection('portfolio')" class="block w-full text-left px-4 py-2 rounded-lg hover:bg-purple-100">Portfolio</button>
+            <button onclick="showSection('certifications')" class="block w-full text-left px-4 py-2 rounded-lg hover:bg-purple-100">Certifications</button>
+            <button onclick="showSection('contact')" class="block w-full text-left px-4 py-2 rounded-lg hover:bg-purple-100">Contact</button>
+            <!-- If you add new menu items above, add them here too -->
         </div>
     </div>
-</section>
 
+    <!-- HOME SECTION - Update your introduction and profile image here -->
+    <section id="home" class="section-content min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- LEFT SIDE - Your introduction text -->
+                <div class="animate-fade-in">
+                    <!-- Replace with your name -->
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-800">
+                        Hello, I'm <span class="text-purple-600">Asia Hamdi Mubarak</span>
+                    </h1>
+                    <!-- Replace with your job title -->
+                    <p class="text-xl md:text-2xl mb-8 text-gray-600">GIS Specialist & Data Analyst</p>
+                    <!-- Replace with your personal description -->
+                    <p class="text-lg mb-8 leading-relaxed text-gray-700">
+                        GIS Specialist experienced in remote sensing, data analysis, and flood mapping. Passionate about transforming spatial data into meaningful insights for climate action and environmental research.
+                    </p>
+                    <!-- Action buttons - you can change the text or add more buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="showSection('portfolio')" class="gradient-bg px-8 py-3 rounded-full text-white font-semibold hover:shadow-lg transition duration-300">View My Work</button>
+                        <button onclick="showSection('contact')" class="border-2 border-purple-300 px-8 py-3 rounded-full text-purple-600 font-semibold hover:bg-purple-50 transition duration-300">Get In Touch</button>
+                    </div>
+                </div>
+                
+                <!-- RIGHT SIDE - Your profile image -->
+                <div class="text-center animate-fade-in">
+                    <!-- PROFILE IMAGE PLACEHOLDER - Replace this with your actual photo -->
+                    <!-- To add your photo: Replace the emoji (👩‍💻) with <img src="your-photo.jpg" alt="Your Name" class="w-80 h-80 rounded-full object-cover"> -->
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center text-8xl shadow-2xl">
+                        👩‍💻
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">Add your professional photo here</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Asia Hamdi Mubarak Adam - All Rights Reserved</p>
+    <!-- ABOUT ME SECTION - Update your background information here -->
+    <section id="about" class="section-content hidden">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">About Me</h2>
+            
+            <!-- CAREER SUMMARY - Replace with your own career description -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="pastel-purple rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-purple-800">Career Summary</h3>
+                    <!-- Replace this paragraph with your own career summary -->
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        As a GIS Specialist with expertise in remote sensing, data analysis, and flood mapping, I bring academic excellence and practical experience to geospatial challenges. My work spans teaching, research, and freelance consulting, where I've successfully delivered data-driven solutions for environmental monitoring and climate action initiatives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Skills & Education Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- TECHNICAL SKILLS - Add or remove your skills here -->
+                <div class="pastel-blue rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-800">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <!-- SKILL ITEM - Copy this entire block to add a new skill -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <!-- Change the emoji and skill name here -->
+                                <span class="font-medium">🗺️ ArcGIS & QGIS</span>
+                                <!-- Change the percentage (also update the width below) -->
+                                <span class="text-sm text-gray-600">95%</span>
+                            </div>
+                            <div class="bg-white rounded-full h-3">
+                                <!-- Change width: 95% to match your skill level -->
+                                <div class="skill-progress bg-blue-400 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add more skills by copying the block above -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">🛰️ Remote Sensing & ENVI</span>
+                                <span class="text-sm text-gray-600">92%</span>
+                            </div>
+                            <div class="bg-white rounded-full h-3">
+                                <div class="skill-progress bg-blue-400 h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">🌍 Google Earth Engine</span>
+                                <span class="text-sm text-gray-600">90%</span>
+                            </div>
+                            <div class="bg-white rounded-full h-3">
+                                <div class="skill-progress bg-blue-400 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">🐍 Python & JavaScript</span>
+                                <span class="text-sm text-gray-600">85%</span>
+                            </div>
+                            <div class="bg-white rounded-full h-3">
+                                <div class="skill-progress bg-blue-400 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">💻 Web Development (HTML/CSS)</span>
+                                <span class="text-sm text-gray-600">80%</span>
+                            </div>
+                            <div class="bg-white rounded-full h-3">
+                                <div class="skill-progress bg-blue-400 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- To add a new skill, copy one of the blocks above and change the details -->
+                    </div>
+                </div>
+
+                <!-- EDUCATION - Update with your degrees and schools -->
+                <div class="pastel-pink rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-pink-800">Education</h3>
+                    <div class="space-y-6">
+                        <!-- EDUCATION ITEM - Copy this block to add more degrees -->
+                        <div class="border-l-4 border-pink-300 pl-4">
+                            <!-- Replace with your degree title -->
+                            <h4 class="font-semibold text-lg">🎓 Master's in GIS & Remote Sensing</h4>
+                            <!-- Replace with your university and location -->
+                            <p class="text-gray-600">University of Khartoum • Sudan</p>
+                            <!-- Replace with your specialization or achievements -->
+                            <p class="text-sm text-gray-700 mt-2">Specialized in remote sensing applications, flood mapping, and environmental monitoring</p>
+                        </div>
+                        
+                        <!-- Add more education by copying the block above -->
+                        <div class="border-l-4 border-pink-300 pl-4">
+                            <h4 class="font-semibold text-lg">🎓 Bachelor of Science in GIS</h4>
+                            <p class="text-gray-600">Future University • Sudan</p>
+                            <p class="text-sm text-gray-700 mt-2">Foundation in geographic information systems and spatial analysis</p>
+                        </div>
+                        <!-- To add more degrees, copy one of the blocks above -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFESSIONAL EXPERIENCE - Add or update your work history -->
+            <div class="pastel-green rounded-3xl p-8 shadow-lg mb-16">
+                <h3 class="text-2xl font-semibold mb-6 text-green-800">Professional Experience</h3>
+                <div class="space-y-6">
+                    <!-- JOB ITEM - Copy this block to add more jobs -->
+                    <div class="border-l-4 border-green-300 pl-4">
+                        <!-- Replace with your job title and emoji -->
+                        <h4 class="font-semibold text-lg">👩‍🏫 Teaching Assistant</h4>
+                        <!-- Replace with company/organization name -->
+                        <p class="text-gray-600">University of Khartoum</p>
+                        <!-- Replace with job description -->
+                        <p class="text-sm text-gray-700 mt-2">Supporting GIS and remote sensing courses, mentoring students in spatial analysis</p>
+                    </div>
+                    
+                    <!-- Add more jobs by copying the block above -->
+                    <div class="border-l-4 border-green-300 pl-4">
+                        <h4 class="font-semibold text-lg">🌍 Google Earth Engine Instructor</h4>
+                        <p class="text-gray-600">Independent Training</p>
+                        <p class="text-sm text-gray-700 mt-2">Teaching cloud-based geospatial analysis and environmental monitoring techniques</p>
+                    </div>
+                    <div class="border-l-4 border-green-300 pl-4">
+                        <h4 class="font-semibold text-lg">💼 GIS Freelancer</h4>
+                        <p class="text-gray-600">Various Clients</p>
+                        <p class="text-sm text-gray-700 mt-2">Providing spatial analysis, mapping, and data visualization services</p>
+                    </div>
+                    <div class="border-l-4 border-green-300 pl-4">
+                        <h4 class="font-semibold text-lg">🔧 Computer Maintenance Specialist</h4>
+                        <p class="text-gray-600">Technical Support</p>
+                        <p class="text-sm text-gray-700 mt-2">Hardware and software maintenance, system optimization</p>
+                    </div>
+                    <!-- To add more experience, copy one of the blocks above -->
+                </div>
+            </div>
+
+            <!-- Courses & Certifications -->
+            <div class="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-3xl p-8 shadow-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-orange-800">Key Courses & Training</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🌍</span>
+                        <span class="font-medium">GIS for Climate Action</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🐍</span>
+                        <span class="font-medium">Python in GIS</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🗺️</span>
+                        <span class="font-medium">QGIS Desktop</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">📱</span>
+                        <span class="font-medium">Geo App Development</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">💻</span>
+                        <span class="font-medium">Full Stack Development</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🎨</span>
+                        <span class="font-medium">Cartography</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION - Add your projects and work samples here -->
+    <section id="portfolio" class="section-content hidden">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Portfolio</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- PROJECT CARD - Copy this entire block to add a new project -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <!-- PROJECT IMAGE/ICON - Replace the emoji with your project image -->
+                    <!-- To add image: Replace the div below with <img src="project-image.jpg" alt="Project Name" class="h-48 w-full object-cover"> -->
+                    <div class="h-48 pastel-purple flex items-center justify-center text-6xl">
+                        🌊
+                    </div>
+                    <div class="p-6">
+                        <!-- Replace with your project title -->
+                        <h3 class="text-xl font-semibold mb-3">Flood Mapping & Risk Assessment</h3>
+                        <!-- Replace with your project description -->
+                        <p class="text-gray-600 mb-4">Advanced flood risk analysis using remote sensing data and hydrological modeling for disaster preparedness.</p>
+                        <!-- PROJECT TAGS - Add or change the technologies used -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">ArcGIS</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Remote Sensing</span>
+                            <!-- Add more tags by copying the line above -->
+                        </div>
+                        <!-- Project button - you can change the text or link -->
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+                <!-- END OF PROJECT CARD -->
+
+                <!-- More project examples - Replace these with your own projects -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 pastel-blue flex items-center justify-center text-6xl">
+                        🌍
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Google Earth Engine Climate Analysis</h3>
+                        <p class="text-gray-600 mb-4">Cloud-based analysis of climate patterns and environmental changes using satellite imagery time series.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Google Earth Engine</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 pastel-pink flex items-center justify-center text-6xl">
+                        🛰️
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Remote Sensing Study</h3>
+                        <p class="text-gray-600 mb-4">Land use change detection using satellite imagery and machine learning algorithms.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">QGIS</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Machine Learning</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 pastel-green flex items-center justify-center text-6xl">
+                        📈
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Business Intelligence Report</h3>
+                        <p class="text-gray-600 mb-4">Spatial business analysis for retail location optimization and market research.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Power BI</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-yellow-200 to-orange-200 flex items-center justify-center text-6xl">
+                        🌍
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Climate Change Mapping</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive mapping of climate change impacts on coastal regions.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">ArcGIS Pro</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Statistical Analysis</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-cyan-200 to-blue-200 flex items-center justify-center text-6xl">
+                        🏙️
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Smart City Analytics</h3>
+                        <p class="text-gray-600 mb-4">IoT data integration and analysis for smart city infrastructure planning.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">IoT Analytics</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Data Mining</span>
+                        </div>
+                        <button class="w-full gradient-bg text-white py-2 rounded-full hover:shadow-lg transition duration-300">View Project</button>
+                    </div>
+                </div>
+                
+                <!-- To add more projects, copy the "PROJECT CARD" block from above and paste it here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION - Add your certificates here -->
+    <section id="certifications" class="section-content hidden">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                
+                <!-- CERTIFICATE ITEM - Copy this block to add more certificates -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <!-- CERTIFICATE IMAGE PLACEHOLDER - Replace with your actual certificate image -->
+                    <!-- To add image: Replace the div below with <img src="certificate-image.jpg" alt="Certificate Name" class="aspect-[4/3] w-full object-cover border-2 border-purple-200"> -->
+                    <div class="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-200 border-2 border-purple-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <!-- Change the emoji to match your certificate type -->
+                            <div class="text-4xl mb-2">🗺️</div>
+                            <p class="text-sm text-purple-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <!-- Replace with your certificate title -->
+                        <h3 class="font-semibold text-gray-800 text-sm">ArcGIS Pro Basics</h3>
+                    </div>
+                </div>
+                <!-- END OF CERTIFICATE ITEM -->
+
+                <!-- Basic Adobe Premiere -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-pink-100 to-pink-200 border-2 border-pink-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🎬</div>
+                            <p class="text-sm text-pink-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Basic Adobe Premiere</h3>
+                    </div>
+                </div>
+
+                <!-- Basics of JavaScript Web Apps -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-yellow-100 to-yellow-200 border-2 border-yellow-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">⚡</div>
+                            <p class="text-sm text-yellow-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Basics of JavaScript Web Apps</h3>
+                    </div>
+                </div>
+
+                <!-- Cartography -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-green-100 to-green-200 border-2 border-green-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🗺️</div>
+                            <p class="text-sm text-green-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Cartography</h3>
+                    </div>
+                </div>
+
+                <!-- Certificate of Experience -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-200 border-2 border-blue-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🏆</div>
+                            <p class="text-sm text-blue-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Certificate of Experience</h3>
+                    </div>
+                </div>
+
+                <!-- Computer Essentials -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-indigo-100 to-indigo-200 border-2 border-indigo-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">💻</div>
+                            <p class="text-sm text-indigo-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Computer Essentials</h3>
+                    </div>
+                </div>
+
+                <!-- Coursera: Python for Everybody -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-orange-100 to-orange-200 border-2 border-orange-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🐍</div>
+                            <p class="text-sm text-orange-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Coursera: Python for Everybody</h3>
+                    </div>
+                </div>
+
+                <!-- CSS Certificate -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-teal-100 to-teal-200 border-2 border-teal-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🎨</div>
+                            <p class="text-sm text-teal-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">CSS Certificate</h3>
+                    </div>
+                </div>
+
+                <!-- Design of Flood Protection and Storm Drain Works -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-cyan-100 to-cyan-200 border-2 border-cyan-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🌊</div>
+                            <p class="text-sm text-cyan-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Design of Flood Protection and Storm Drain Works</h3>
+                    </div>
+                </div>
+
+                <!-- Full Stack Development Track -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-purple-100 to-purple-200 border-2 border-purple-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">⚙️</div>
+                            <p class="text-sm text-purple-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Full Stack Development Track</h3>
+                    </div>
+                </div>
+
+                <!-- Geo App -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-emerald-100 to-emerald-200 border-2 border-emerald-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">📱</div>
+                            <p class="text-sm text-emerald-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Geo App</h3>
+                    </div>
+                </div>
+
+                <!-- GIS for Climate Action -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-green-100 to-green-200 border-2 border-green-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🌍</div>
+                            <p class="text-sm text-green-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">GIS for Climate Action</h3>
+                    </div>
+                </div>
+
+                <!-- Going Places with Spatial Analysis -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-violet-100 to-violet-200 border-2 border-violet-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">📊</div>
+                            <p class="text-sm text-violet-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Going Places with Spatial Analysis</h3>
+                    </div>
+                </div>
+
+                <!-- HTML Certificate -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-red-100 to-red-200 border-2 border-red-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🌐</div>
+                            <p class="text-sm text-red-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">HTML Certificate</h3>
+                    </div>
+                </div>
+
+                <!-- Imagery in Action -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-pink-100 to-pink-200 border-2 border-pink-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🛰️</div>
+                            <p class="text-sm text-pink-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Imagery in Action</h3>
+                    </div>
+                </div>
+
+                <!-- Internet and Email Essentials -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-200 border-2 border-blue-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">📧</div>
+                            <p class="text-sm text-blue-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Internet and Email Essentials</h3>
+                    </div>
+                </div>
+
+                <!-- Introduction to Web Development (PHP & SQL) -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-amber-100 to-amber-200 border-2 border-amber-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🔧</div>
+                            <p class="text-sm text-amber-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Introduction to Web Development (PHP & SQL)</h3>
+                    </div>
+                </div>
+
+                <!-- JavaScript Certificate -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-yellow-100 to-yellow-200 border-2 border-yellow-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">⚡</div>
+                            <p class="text-sm text-yellow-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">JavaScript Certificate</h3>
+                    </div>
+                </div>
+
+                <!-- Python in GIS -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-lime-100 to-lime-200 border-2 border-lime-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🐍</div>
+                            <p class="text-sm text-lime-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">Python in GIS</h3>
+                    </div>
+                </div>
+
+                <!-- QGIS 3 Desktop -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-emerald-100 to-emerald-200 border-2 border-emerald-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">🗺️</div>
+                            <p class="text-sm text-emerald-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">QGIS 3 Desktop</h3>
+                    </div>
+                </div>
+
+                <!-- The Location Advantage -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-rose-100 to-rose-200 border-2 border-rose-200 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="text-4xl mb-2">📍</div>
+                            <p class="text-sm text-rose-600 font-medium">Certificate Image</p>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800 text-sm">The Location Advantage</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION - Update your contact information here -->
+    <section id="contact" class="section-content hidden">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- LEFT SIDE - Your contact information -->
+                    <div class="pastel-purple rounded-3xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-purple-800">Let's Connect</h3>
+                        <!-- Replace with your personal message -->
+                        <p class="text-lg mb-8 text-gray-700">I'm always excited to discuss new opportunities and collaborate on interesting projects. Feel free to reach out!</p>
+                        <div class="space-y-6">
+                            <!-- EMAIL - Replace with your email address -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl">📧</div>
+                                <div>
+                                    <div class="font-semibold">Email</div>
+                                    <!-- Replace with your actual email -->
+                                    <div class="text-gray-600">asia.hamdi@example.com</div>
+                                </div>
+                            </div>
+                            <!-- PHONE - Replace with your phone number -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl">📱</div>
+                                <div>
+                                    <div class="font-semibold">Phone</div>
+                                    <!-- Replace with your actual phone number -->
+                                    <div class="text-gray-600">+20 (xxx) xxx-xxxx</div>
+                                </div>
+                            </div>
+                            <!-- LOCATION - Replace with your location -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl">📍</div>
+                                <div>
+                                    <div class="font-semibold">Location</div>
+                                    <!-- Replace with your city and country -->
+                                    <div class="text-gray-600">Giza, Egypt</div>
+                                </div>
+                            </div>
+                            <!-- NATIONALITY - Replace with your nationality -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl">🇸🇩</div>
+                                <div>
+                                    <div class="font-semibold">Nationality</div>
+                                    <!-- Replace with your nationality -->
+                                    <div class="text-gray-600">Sudanese</div>
+                                </div>
+                            </div>
+                            <!-- To add more contact info, copy one of the blocks above -->
+                        </div>
+                    </div>
+                    <!-- RIGHT SIDE - Contact form (this works automatically) -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg">
+                        <!-- CONTACT FORM - This form works automatically, no changes needed -->
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2 text-gray-700">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2 text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent" placeholder="Project inquiry">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2 text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 focus:border-transparent resize-none" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <!-- You can change the button text here -->
+                            <button type="submit" class="w-full gradient-bg text-white py-3 rounded-xl font-semibold hover:shadow-lg transition duration-300">Send Message</button>
+                        </form>
+                        <!-- Form success message appears here automatically -->
+                        <div id="formMessage" class="mt-4 text-center hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - Update copyright and social links -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Replace with your name and current year -->
+            <p>&copy; 2024 Asia Hamdi Mubarak. All rights reserved.</p>
+            <!-- SOCIAL MEDIA LINKS - Replace these with your actual social media links -->
+            <div class="flex justify-center gap-6 mt-4">
+                <!-- You can replace these emojis with actual links to your profiles -->
+                <button class="text-2xl hover:text-purple-400 transition duration-300">💼</button> <!-- LinkedIn -->
+                <button class="text-2xl hover:text-purple-400 transition duration-300">🐙</button> <!-- GitHub -->
+                <button class="text-2xl hover:text-purple-400 transition duration-300">📧</button> <!-- Email -->
+                <button class="text-2xl hover:text-purple-400 transition duration-300">🐦</button> <!-- Twitter -->
+                <!-- To add more social links, copy one of the buttons above -->
+            </div>
+        </div>
     </footer>
-</body>
+
+    <!-- JAVASCRIPT CODE - This makes the website work, don't change unless you know what you're doing -->
+    <script>
+        // Keep track of which section is currently shown
+        let currentSection = 'home';
+
+        // Function to switch between different sections (Home, About, Portfolio, etc.)
+        function showSection(sectionId) {
+            // Hide all sections first
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+
+            // Update navigation buttons to show which one is active
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('nav-active');
+            });
+
+            // Highlight the current menu button
+            event.target.classList.add('nav-active');
+
+            currentSection = sectionId;
+
+            // Close mobile menu when a section is selected
+            document.getElementById('mobileMenu').classList.add('hidden');
+        }
+
+        // Function to open/close mobile menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent page reload
+            
+            const formMessage = document.getElementById('formMessage');
+            const name = document.getElementById('name').value;
+            
+            // Show success message (this is just a demo - in real life you'd send the email)
+            formMessage.className = 'mt-4 text-center text-green-600 bg-green-100 p-3 rounded-lg';
+            formMessage.textContent = `Thank you ${name}! Your message has been sent successfully. I'll get back to you soon.`;
+            formMessage.classList.remove('hidden');
+            
+            // Clear the form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Set up the page when it first loads
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.nav-btn').classList.add('nav-active');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98f2f53da79bc0ab',t:'MTc2MDU2OTQ5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
